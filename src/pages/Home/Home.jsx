@@ -1,10 +1,10 @@
 import React from 'react'
-import useClock from '../hooks/useClock'
+import useClock from '../../hooks/useClock'
 import { NavLink } from 'react-router-dom'
 
-import Navbar from '../components/Navbar/Navbar'
-import model from '../assets/img/matthew-hamilton-tNCH0sKSZbA-unsplash.jpg'
-import '../assets/css/home.css'
+import Navbar from '../../components/Navbar/Navbar'
+import model from '../../assets/img/matthew-hamilton-tNCH0sKSZbA-unsplash.jpg'
+import '../../assets/css/home.css'
 
 export default function Home() {
   const timestamp = useClock()

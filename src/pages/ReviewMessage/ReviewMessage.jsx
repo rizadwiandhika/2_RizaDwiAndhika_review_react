@@ -2,8 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import imgDot from '../assets/img/img-dot.png'
-import '../assets/css/review_message.css'
+import imgDot from '../../assets/img/img-dot.png'
+import '../../assets/css/review_message.css'
 
 export default function ReviewMessage() {
   const contact = useSelector((state) => state.contact)

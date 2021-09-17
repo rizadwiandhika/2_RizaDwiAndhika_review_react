@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-import Navbar from '../components/Navbar/Navbar'
+import Navbar from '../../components/Navbar/Navbar'
 
-import '../assets/css/news.css'
+import '../../assets/css/news.css'
 
 export default function News() {
   const [news, setNews] = useState({})

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { changed, reset, touched, findAllInvalid } from '../store/contact'
+import { changed, reset, touched, findAllInvalid } from '../../store/contact'
 import { useHistory } from 'react-router-dom'
 
-import '../assets/css/contact_us.css'
-import poster from '../assets/img/charles-rRWiVQzLm7k-unsplash.jpg'
-import logo from '../assets/img/logo-ALTA-v2.png'
+import '../../assets/css/contact_us.css'
+import poster from '../../assets/img/charles-rRWiVQzLm7k-unsplash.jpg'
+import logo from '../../assets/img/logo-ALTA-v2.png'
 
 export default function ContactUs() {
   const contact = useSelector((state) => state.contact)

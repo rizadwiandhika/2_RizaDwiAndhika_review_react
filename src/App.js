@@ -1,9 +1,9 @@
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import ContactUs from './pages/ContactUs'
-import ReviewMessage from './pages/ReviewMessage'
-import News from './pages/News'
+import Home from './pages/Home/Home'
+import ContactUs from './pages/ContactUs/ContactUs'
+import ReviewMessage from './pages/ReviewMessage/ReviewMessage'
+import News from './pages/News/News'
 
 function App() {
   return (
