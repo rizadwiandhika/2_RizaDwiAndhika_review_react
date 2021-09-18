@@ -6,7 +6,6 @@ export default function useClock() {
   useEffect(() => {
     const interval = setInterval(() => {
       setClock(getTimeStamp())
-      console.log('tick', getTimeStamp())
     }, 1000)
 
     return () => clearInterval(interval)
