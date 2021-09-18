@@ -236,5 +236,8 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux,visualstudiocode,node,react,git
 
+build/
+.netlify/
+
 test.js
 test.json
