@@ -13,9 +13,9 @@ export default function Home() {
       <Navbar />
 
       <div className="header-body d-flex justify-content-center ">
-        <div className="container mt-5">
+        <div className="container mt-1">
           <div className="row mb-5">
-            <h1 style={{ margin: 'auto', textAlign: 'center' }}>{timestamp}</h1>
+            <p className="timestamp">{timestamp}</p>
           </div>
           <div className="row">
             <div className="col-md-5 ">

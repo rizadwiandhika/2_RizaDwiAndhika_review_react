@@ -10,6 +10,13 @@ ul li a:hover {
   color: var(--orange) !important;
 }
 
+.timestamp {
+  text-align: end;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--blue);
+}
+
 .header-body {
   position: relative;
   min-height: 100vh;
