@@ -28,8 +28,13 @@
   margin: 16px auto;
 }
 .imgContainer img {
+  display: block;
   width: 100%;
   object-fit: cover;
+}
+.imgContainer p {
+  color: rgba(51, 51, 51, 0.61);
+  margin-top: 0.5rem;
 }
 
 .berita {

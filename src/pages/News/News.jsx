@@ -6,16 +6,17 @@ import Navbar from '../../components/Navbar/Navbar'
 import '../../assets/css/news.css'
 
 export default function News() {
-  const [news, setNews] = useState({})
+  const [news, setNews] = useState(null)
   const [error, setError] = useState(null)
 
   useEffect(() => {
     async function getNews() {
       try {
         const result = await axios.get(
-          'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=ffee6e40f6b04efba4a74eb6f3215c3b'
+          'https://api.nytimes.com/svc/topstories/v2/science.json?api-key=64U3e8oy0NKoKhizZoBXnb7Jyi9gni39'
         )
-        setNews(result.data.articles[5])
+
+        setNews(result.data.results.slice(0, 5))
       } catch (error) {
         setError(error)
       }
@@ -31,23 +32,26 @@ export default function News() {
         {error ? (
           <h3>Oops.. Something went wrong :(</h3>
         ) : (
-          <>
-            <p className="subjudul">{news?.description}</p>
-            <h1 className="judul">{news?.title}</h1>
+          news?.map((n) => (
+            <div key={n.url} className="mb-5">
+              <p className="subjudul">{n.section}</p>
+              <h2 className="judul">{n.title}</h2>
 
-            <p className="author">
-              {news?.author && 'Article by: ' + news.author}
-            </p>
+              <p className="author">{n.byline}</p>
 
-            <div>
-              <div className="imgContainer">
-                <img src={news?.urlToImage} alt="" />
+              <div>
+                <div className="imgContainer">
+                  <img src={n.multimedia[0].url} alt="news" />
+                  <p>{n.multimedia[0].caption}</p>
+                </div>
               </div>
+              <div className="berita">
+                <p>{n.abstract}</p>
+              </div>
+
+              <hr />
             </div>
-            <div className="berita">
-              <p>{news?.content}</p>
-            </div>
-          </>
+          ))
         )}
       </div>
     </>
