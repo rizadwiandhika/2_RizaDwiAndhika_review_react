@@ -1,5 +1,5 @@
 import React from 'react'
-import useClock from '../../hooks/useClock'
+import useClock from '../../hooks/useClock/useClock'
 import { NavLink } from 'react-router-dom'
 
 import Navbar from '../../components/Navbar/Navbar'

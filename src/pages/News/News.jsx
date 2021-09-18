@@ -14,7 +14,6 @@ export default function News() {
         'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=ffee6e40f6b04efba4a74eb6f3215c3b'
       )
       setNews(result.data.articles[0])
-      console.log(result.data.articles[0])
     }
     getNews()
   }, [])
